@@ -1,5 +1,7 @@
 package org.propeers.sorting;
 
+import java.util.ArrayList;
+
 public class Sort {
 
     public static void bubbleSort(int[] arr, int n) {
@@ -43,5 +45,21 @@ public class Sort {
             }
             arr[k] = val;
         }
+    }
+
+    public static ArrayList<Integer> findArrayIntersection(ArrayList<Integer> arr1, int n, ArrayList<Integer> arr2, int m) {
+        // Write Your Code Here.
+        ArrayList result = new ArrayList();
+        int i=0, j=0;
+        while(i<n && j<m) {
+            if (arr1.get(i) < arr2.get(j))  i++;
+            else if (arr1.get(i) > arr2.get(j)) j++;
+            else {
+                result.add(arr1.get(i));
+                i++;
+                j++;
+            }
+        }
+        return result;
     }
 }
