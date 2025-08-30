@@ -28,9 +28,20 @@ public class Sort {
             arr[i] = arr[minIndex];
             arr[minIndex] = temp;
         }
+    }
 
-        for (int i: arr) {
-            System.out.printf("%d ", i);
+    public static void insertionSort(int n , int[] arr) {
+        // Write your code here.
+        // as long as there are nos smaller than current in the earlier indexes, swap the current with the last occurence
+
+        for(int i=0; i<n; i++) {
+            int val = arr[i];
+            int k = i;
+            while(k>0 && val<arr[k-1]) {
+                arr[k] = arr[k-1];
+                k--;
+            }
+            arr[k] = val;
         }
     }
 }
