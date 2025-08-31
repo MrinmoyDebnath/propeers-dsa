@@ -1,6 +1,6 @@
-import java.util.* ;
-import java.io.*;
-public class Solution {
+package org.propeers.problems;
+
+public class SecondLargest {
     public static int findSecondLargest(int n, int[] arr) {
         // Write your code here.
         Integer largest = arr[0], secondLargest= null;
